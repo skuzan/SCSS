@@ -1,0 +1,34 @@
+//Home Page Styles
+
+.home-bgImg-container{
+    @include bgImage (100vh, $main-bgImage-path);
+
+}
+
+.home{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+
+    &_name{
+        font-size: 5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 3px solid $secondary-color;
+
+        &_last{
+            color: $secondary-color;
+            font-weight: 900;
+        }
+    }
+
+    h2{
+        font-size: 1.6rem;
+        padding: 1rem;
+        margin-top: 0;
+        font-weight: 300;
+    }
+}

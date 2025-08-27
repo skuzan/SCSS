@@ -1,0 +1,23 @@
+@import "abstracts/colors", "abstracts/mixins", "abstracts/variable";
+@import "base/reset";
+@import "compenents/footer", "compenents/nav", "compenents/responsive";
+@import "pages/about", "pages/index";
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css');
+
+body{
+    height: 100vh;
+    font-family: $font-family;
+    color: $text-color;
+    background-color: $primary-color;
+    line-height: 1;
+}
+
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+
+h1,h2,h3{
+    font-weight: 400;
+}
