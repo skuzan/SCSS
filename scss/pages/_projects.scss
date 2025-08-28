@@ -1,0 +1,69 @@
+.projects-bgImg-container{
+    @include bgImage (40vh, $main-bgImage-path);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .projects_bio_image{
+        text-align: center;
+        padding: 2rem;
+
+        h2{
+            font-size: 3rem;
+            color: $secondary-color;
+        }
+
+        p{
+            font-size: 1.2rem;
+            margin: 2rem;
+        }
+    }
+
+}
+
+.projects{
+    &_items{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem 5rem;
+        gap: 2rem
+    }
+
+    &_item{
+        cursor: pointer;
+        width: calc(33.33% - 2rem);
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.4s, box-shadow 0.4s;
+
+        img{
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+
+        &::after{
+            content:"";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba($secondary-color, 0.8);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+        }
+
+        &:hover::after{
+            opacity: 1;
+        }
+    }
+}

@@ -20,3 +20,27 @@ footer.horizontal{
     padding: 1rem;
     @extend .link-style;
 }
+
+footer.vertical{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 1rem;
+    margin-bottom: 1rem;
+
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 1rem;
+        @extend .link-style
+    }
+
+    .copyright{
+        position: fixed;
+        bottom: 1rem;
+        right: 3rem;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+}
